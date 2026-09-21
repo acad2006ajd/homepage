@@ -195,7 +195,7 @@
 
     <div data-screen-label="Hero" style="position: relative; width: 100%; flex: 1 1 auto; min-height: 0; overflow: hidden; background: #0B1016;">
     <video ref="{{ videoARef }}" src="uploads/Video Project 4-2.mp4" muted="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 0%; opacity: 1; transition: opacity 0.6s ease; filter: brightness(0.82) saturate(105%);"></video>
-    <video ref="{{ videoBRef }}" src="uploads/hero-clip-2.mp4" muted="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.6s ease; filter: brightness(0.82) saturate(105%);"></video>
+    <video ref="{{ videoBRef }}" src="uploads/hero-clip-2b.mp4" muted="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.6s ease; filter: brightness(0.82) saturate(105%);"></video>
     <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(8,12,18,0.58) 0%, rgba(8,12,18,0.34) 32%, rgba(8,12,18,0.06) 58%, rgba(8,12,18,0) 76%);"></div>
     <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,16,22,0.6) 0%, transparent 22%, transparent 62%, rgba(11,16,22,0.72) 100%);"></div>
 
@@ -2749,18 +2749,49 @@ class Component extends DCLogic {
        hosts/embeds, so force it via the property too. */
     clips.forEach((v) => { v.muted = true; v.volume = 0; });
     let active = 0;
-    const playSafely = (v) => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+    const cancelSwap = () => {
+      clearTimeout(this.vSwapTimer);
+      clearTimeout(this.vSegTimer);
+      this.vSwapTimer = null;
+      this.vSegTimer = null;
+      this.vSwapping = false;
+      this.vSwapFrom = -1;
+    };
+    const applyActive = () => {
+      clips.forEach((v, i) => { v.style.opacity = i === active ? "1" : "0"; });
+    };
+    const playSafely = (v) => {
+      const p = v.play();
+      if (!p || !p.catch) return;
+      p.catch(() => {
+        if (clips[active] !== v || this.vPaused || this.vFinished) return;
+        const retry = () => {
+          if (clips[active] !== v || this.vPaused || this.vFinished) return;
+          const q = v.play();
+          if (q && q.catch) q.catch(() => {});
+        };
+        v.addEventListener("canplay", retry, { once: true });
+        ["pointerdown", "keydown", "touchstart", "scroll"].forEach((ev) =>
+          window.addEventListener(ev, retry, { once: true, passive: true }));
+      });
+    };
     playSafely(clips[0]);
-    const warm = (v) => {
+    const warm = () => {
+      const v = clips[1];
       if (v.dataset.warmed) return;
       v.dataset.warmed = "1";
+      v.preload = "auto";
       try { v.load(); } catch (e) {}
-      const p = v.play();
-      const park = () => { v.pause(); v.currentTime = 0; };
-      if (p && p.then) p.then(park).catch(() => {});
-      else park();
     };
-    warm(clips[1]);
+    clips[1].addEventListener("error", () => {
+      if (active === 1) { active = 0; applyActive(); playSafely(clips[0]); }
+      clips[1].dataset.dead = "1";
+    }, { once: true });
+    if (clips[0].readyState >= 3) warm();
+    else {
+      clips[0].addEventListener("canplaythrough", warm, { once: true });
+      setTimeout(warm, 4000);
+    }
 
     /* Segment indicator: two short bars, the live one filling left-to-right —
        reads as "clip 1 of 2" rather than one seekable timeline. */
@@ -2786,29 +2817,31 @@ class Component extends DCLogic {
     /* Sequential, never overlapping: the outgoing clip fades to black and is
        paused before the incoming one starts fading in. */
     const show = (next) => {
-      if (next === active || this.vSwapping) return;
+      if (next === active) return;
+      cancelSwap();
       this.vSwapping = true;
       this.vSwapFrom = active;
       const from = clips[active], to = clips[next];
       from.style.opacity = "0";
       active = next;
       paintSegs();
-      setTimeout(() => {
+      this.vSwapTimer = setTimeout(() => {
+        this.vSwapTimer = null;
         from.pause();
         to.currentTime = 0;
         let shown = false;
         const reveal = () => {
-          if (shown) return;
+          if (shown || clips[active] !== to) return;
           shown = true;
-          to.style.opacity = "1";
+          applyActive();
           if (!this.vPaused) playSafely(to);
         };
-        if (to.readyState >= 3) reveal();
+        if (to.readyState >= 2) reveal();
         else {
-          to.addEventListener("canplaythrough", reveal, { once: true });
           to.addEventListener("loadeddata", reveal, { once: true });
+          to.addEventListener("canplay", reveal, { once: true });
           /* Never strand the reel on a clip that won't report readiness. */
-          setTimeout(reveal, 1200);
+          setTimeout(reveal, 900);
         }
         if (this.vFlashLabels) this.vFlashLabels();
         this.vSwapping = false;
@@ -2821,19 +2854,21 @@ class Component extends DCLogic {
        last frame and drops the visitor into S2; scrolling back up to the hero
        rewinds and plays the pair again. */
     const restart = () => {
+      cancelSwap();
       this.vFinished = false;
       this.vAutoScrolled = false;
       this.vLeftHero = false;
       if (this.vReplay) { this.vReplay.style.display = "none"; this.vReplay.style.opacity = "0"; this.vReplay.style.pointerEvents = "none"; this.vReplay.style.transform = "translateY(8px)"; }
-      clips.forEach((v, i) => { v.pause(); v.currentTime = 0; v.style.opacity = i === 0 ? "1" : "0"; });
+      clips.forEach((v) => { v.pause(); v.currentTime = 0; });
       active = 0;
+      applyActive();
       paintSegs();
       if (!this.vPaused) playSafely(clips[0]);
       if (this.vFlashLabels) this.vFlashLabels();
     };
     this.vRestartReel = restart;
     const swap = () => {
-      if (active === 0) { show(1); return; }
+      if (active === 0 && !clips[1].dataset.dead) { show(1); return; }
       {
         this.vFinished = true;
         clips[active].pause();
@@ -2893,7 +2928,12 @@ class Component extends DCLogic {
     });
 
     segs.forEach((b, i) => b.addEventListener("click", () => {
-      if (this.vFinished) { restart(); if (i === 1) show(1); return; }
+      if (i === 1) warm();
+      if (this.vFinished) {
+        restart();
+        if (i === 1) this.vSegTimer = setTimeout(() => { this.vSegTimer = null; show(1); }, 40);
+        return;
+      }
       show(i);
       if (this.vPaused) setPaused(false);
     }));
