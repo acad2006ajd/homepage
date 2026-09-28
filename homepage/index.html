@@ -196,8 +196,8 @@
     <div data-screen-label="Hero" style="position: relative; width: 100%; flex: 1 1 auto; min-height: 0; overflow: hidden; background: #0B1016;">
     <video ref="{{ videoARef }}" src="uploads/Video Project 4-2.mp4" muted="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 0%; opacity: 1; transition: opacity 0.6s ease; filter: brightness(0.82) saturate(105%);"></video>
     <video ref="{{ videoBRef }}" src="uploads/hero-clip-2b.mp4" muted="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.6s ease; filter: brightness(0.82) saturate(105%);"></video>
-    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(8,12,18,0.58) 0%, rgba(8,12,18,0.34) 32%, rgba(8,12,18,0.06) 58%, rgba(8,12,18,0) 76%);"></div>
-    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,16,22,0.6) 0%, transparent 22%, transparent 62%, rgba(11,16,22,0.72) 100%);"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(8,12,18,0.24) 0%, rgba(8,12,18,0.08) 32%, rgba(8,12,18,0.06) 58%, rgba(8,12,18,0) 76%);"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,16,22,0.28) 0%, transparent 22%, transparent 62%, rgba(11,16,22,0.36) 100%);"></div>
 
     <div ref="{{ vSegRef }}" style="position: absolute; left: clamp(18px, 2.4vw, 38px); top: 50%; transform: translateY(-50%); z-index: 25; display: flex; flex-direction: column; align-items: flex-start; gap: 14px;">
       <div data-vrow="0" style="position: relative; display: flex; align-items: center; gap: 10px;">
@@ -404,10 +404,10 @@
   </section>
 
   <section id="reviews" data-screen-label="Reviews" style="position: relative; width: 100%; background: transparent; padding: clamp(36px, 5vh, 60px) 20px clamp(40px, 6vh, 72px); display: flex; flex-direction: column; align-items: center;">
-    <h2 style="width: 100%; max-width: 1000px; margin: 0 auto clamp(28px, 5vh, 56px); text-align: left; font-size: clamp(20px, 2vw, 28px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.3; color: #1F2429">아정당을 직접 경험한<br><span style="color: rgb(20, 92, 230);">실제 고객님의 후기</span>예요</h2>
+    <h2 data-rv-head="" style="width: 100%; max-width: 1000px; margin: 0 auto clamp(28px, 5vh, 56px); text-align: left; font-size: clamp(20px, 2vw, 28px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.3; color: #1F2429">아정당을 직접 경험한<br><span style="color: rgb(20, 92, 230);">실제 고객님의 후기</span>예요</h2>
       <div style="width: 100%; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px;">
-        <div style="width: min(92vw, 1000px); overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);">
-          <div ref="{{ reviewTabsRef }}" data-navscroll="" data-review-tabs="" style="display: flex; width: max-content; margin: 0 auto; gap: 10px; padding: 2px 24px;"></div>
+        <div style="width: min(92vw, 1000px); overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 0%, #000 94%, transparent 100%); mask-image: linear-gradient(to right, #000 0%, #000 94%, transparent 100%);">
+          <div ref="{{ reviewTabsRef }}" data-navscroll="" data-review-tabs="" style="display: flex; width: max-content; margin: 0 auto 0 0; gap: 10px; padding: 2px 0;"></div>
         </div>
         <div ref="{{ reviewGridRef }}" data-review-grid="" style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
         <a href="#" style="margin-top: 8px; width: min(100%, 420px); height: 56px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #C7D8FA; border-radius: 999px; background: rgba(255,255,255,0.7); font-size: 16px; font-weight: 700; color: #1F2429; transition: background-color 150ms;" style-hover="background: #fff;">리얼후기 더보기</a>
@@ -423,7 +423,7 @@
       <div ref="{{ scCopyRef }}" style="max-width: min(92vw, 100%); display: flex; flex-direction: column; gap: 10px; opacity: 0; transform: translateY(14px); transition: opacity 0.8s ease 0.35s, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0.35s;">
         <h2 style="margin: 0; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; white-space: nowrap; text-shadow: 0 2px 18px rgba(255,255,255,0.95), 0 0 42px rgba(255,255,255,0.9);">단순 중개 플랫폼이 아닙니다</h2>
         <p style="margin: clamp(12px, 2vh, 22px) 0 0; font-size: clamp(17px, 1.7vw, 24px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #575E64; text-wrap: pretty"><span style="color: rgb(20, 92, 230); font-weight: 700;">전국 72개 지점, 임직원 1,200명</span>이<br>아정당 이름을 걸고 일하고 있어요</p>
-        <div ref="{{ cr2WheelRef }}" style="flex: 0 0 auto; width: 100%; max-width: 940px; margin: 0 auto; opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 1s cubic-bezier(0.16,1,0.3,1); -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);">
+        <div ref="{{ cr2WheelRef }}" style="flex: 0 0 auto; width: 100%; max-width: 940px; margin: 0 auto; opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 1s cubic-bezier(0.16,1,0.3,1); -webkit-mask-image: linear-gradient(to right, #000 0%, #000 94%, transparent 100%); mask-image: linear-gradient(to right, #000 0%, #000 94%, transparent 100%);">
           <div style="display: flex; width: max-content; gap: clamp(10px, 1.2vw, 18px); height: clamp(180px, 26vh, 268px); animation: ajd-strip 46s linear infinite; margin-top: clamp(20px, 3.4vh, 40px); margin-bottom: clamp(20px, 3.4vh, 40px)">
           <div style="flex: 0 0 auto; height: 100%; border-radius: 16px; overflow: hidden; background: #F4F6FA; box-shadow: 0 18px 40px -26px rgba(33,39,42,0.45);">
             <img src="assets/strip-internet.png" alt="인터넷 설치" style="height: 100%; width: auto; display: block; object-fit: cover;">
@@ -484,7 +484,15 @@
     </div>
   </div></section>
 
-  <section id="liability" data-screen-label="Liability" style="position: relative; width: 100%; background: transparent; padding: clamp(56px, 8vh, 96px) 20px clamp(48px, 7vh, 80px); display: flex; flex-direction: column; align-items: center;">
+  <section id="craft2" data-screen-label="Craft2" style="position: relative; width: 100%; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3vh, 40px); padding: clamp(22px, 3.4vh, 40px) 20px clamp(44px, 7vh, 80px); overflow: hidden;">
+    <div ref="{{ cr2CopyRef }}" style="flex: 0 0 auto; text-align: center; opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.16,1,0.3,1);">
+      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; text-wrap: pretty;">아정당은 생활 전반을<br>여러분과 함께하고 있습니다</h2>
+    </div>
+
+      <img src="assets/service-web2.png" alt="아정당 생활서비스 전반" style="width: min(82vw, 720px); max-height: 48vh; margin: 0 auto; object-fit: contain; display: block;">
+      <p style="margin: 0; max-width: 760px; text-align: center; font-size: clamp(16px, 1.5vw, 21px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #575E64; text-wrap: pretty;">한 번의 실망으로 브랜드&nbsp;<span style="letter-spacing: -0.42px;">전체</span>&nbsp;신뢰가 무너지기에<br>절대 어떤 서비스라도 대충 하지 않습니다</p>
+
+  </section><section id="liability" data-screen-label="Liability" style="position: relative; width: 100%; background: transparent; padding: clamp(56px, 8vh, 96px) 20px clamp(48px, 7vh, 80px); display: flex; flex-direction: column; align-items: center;">
     <h2 style="margin: 0 0 clamp(16px, 2.6vh, 30px); max-width: 900px; text-align: center; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; text-wrap: pretty;">문제가 발생하면<br><span style="color: rgb(20, 92, 230);">본사가 직접 책임</span>지겠습니다</h2>
     
     <div ref="{{ lbRef }}" style="width: 100%; max-width: 680px; margin-top: clamp(18px, 3vh, 32px)">
@@ -496,17 +504,10 @@
           <div data-lb-track="" style="display: flex; transition: transform 0.55s cubic-bezier(0.22,1,0.36,1);"></div>
         </div>
       </div>
-    </div><p style="margin: clamp(12px, 2vh, 22px) 0 0; font-size: clamp(17px, 1.7vw, 24px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #575E64; text-wrap: pretty; text-align: center" data-reveal="">단 한번의 실망이 브랜드 전체의 신뢰를<br>무너뜨린다는 걸 알기 때문입니다</p>
-  </section>
-
-  <section id="craft2" data-screen-label="Craft2" style="position: relative; width: 100%; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3vh, 40px); padding: clamp(22px, 3.4vh, 40px) 20px clamp(44px, 7vh, 80px); overflow: hidden;">
-    <div ref="{{ cr2CopyRef }}" style="flex: 0 0 auto; text-align: center; opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.16,1,0.3,1);">
-      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; text-wrap: pretty;">한 번의 인연으로 끝나지 않는<br>아정당이 되겠습니다</h2>
     </div>
-
-      <img src="assets/service-web2.png" alt="아정당 생활서비스 전반" style="width: min(82vw, 720px); max-height: 48vh; margin: 0 auto; object-fit: contain; display: block;">
-
   </section>
+
+  
 
   <section id="support" data-screen-label="Support" style="position: relative; width: 100%; background: transparent; padding: clamp(56px, 8vh, 96px) 20px; display: flex; justify-content: center;">
     <div style="width: 100%; max-width: 680px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(22px, 3.6vh, 40px);">
@@ -515,7 +516,7 @@
         <p style="margin: 0; font-size: clamp(16px, 1.5vw, 21px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #575E64; text-wrap: pretty;">밤 늦은 시간, 주말·공휴일에도<br>빠르게 이용 가능해요</p>
       </div>
       <div data-reveal="" style="width: 100%; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 16px 36px -28px rgba(33,39,42,0.4);">
-        <img src="assets/why-panel-3.png" alt="365일 상담 데스크" style="width: 100%; height: auto; display: block;">
+        <video ref="{{ supportVidRef }}" src="uploads/support-consult.mp4" autoplay muted loop playsinline preload="metadata" aria-label="365일 상담 현장" style="width: 100%; height: auto; display: block;"></video>
       </div>
     </div>
   </section>
@@ -819,6 +820,38 @@ const RV_PHOTOS = {
   "인터넷": ["assets/rv-internet-1.png", "assets/rv-internet-2.png", "assets/rv-internet-3.png", "assets/rv-internet-4.png"],
 };
 
+/* 부동산 is a portfolio, not reviews — only the 동 is shown. Photos are empty
+   slots until originals arrive. */
+const PROPERTY = {
+  "원·투룸": [
+    { n: "라체르보푸르지오써밋", d: "행당동", a: "80.61㎡ / 24.4평" },
+    { n: "리마크빌이스트폴 B1타입", d: "자양동", a: "90.12㎡ / 27.03평" },
+    { n: "더라움펜트하우스", d: "자양동", a: "120.36㎡ / 36.4평" },
+    { n: "RS6264", d: "자양동", a: "79.34㎡ / 24.04평" },
+    { n: "리마크빌이스트폴 B2", d: "자양동", a: "102.6㎡ / 31평" },
+  ],
+  "상가·사무실": [
+    { n: "역삼동 상가", d: "역삼동", a: "81.07㎡ / 24.5평" },
+    { n: "대연동 상가", d: "대연동", a: "20.80㎡ / 6.2평" },
+    { n: "상수동 상가", d: "상수동", a: "119.31㎡ / 36평" },
+    { n: "방배동 상가", d: "방배동", a: "72㎡ / 21.7평" },
+    { n: "천호동 상가", d: "천호동", a: "107.47㎡ / 31.6평" },
+  ],
+  "하이엔드": [
+    { n: "미켈란호수가 펜트하우스", d: "석촌동", a: "226.79㎡ / 68평" },
+    { n: "청담르엘 109동", d: "청담동", a: "84㎡ / 35평" },
+    { n: "청담르엘 106동", d: "청담동", a: "84㎡ / 35평" },
+  ],
+};
+
+/* 인테리어: real reviews laid over the finished-site photo. */
+const INTERIOR = [
+  { site: "서울 송파구 석촌호수로 230", size: "68평 (225m²)", term: "2025.11.17 + 4주", price: "240만원" },
+  { site: "판교 매드엔진 스튜디오(사무실)", size: "40평", term: "-", price: "-" },
+  { site: "우장산아이파크e편한세상(아파트)", size: "32평", term: "-", price: "-" },
+  { site: "중화한신(아파트)", size: "25평 리모델링", term: "-", price: "-" },
+];
+
 const REVIEWS = {
   "인터넷": [
     { t: "아정당에서 신청한거 잘 한거 같습니다. 설치후 칼같이 현금도 들어왔네요~^^ 공짜돈 생긴거...", n: "아정당_82482E", d: "26.07.27" },
@@ -844,6 +877,15 @@ const REVIEWS = {
     { t: "입주 청소까지 연결해줘서 따로 알아볼 필요가 없었어요. 한 번에 처리되니 훨씬 편합니다...", n: "아정당_6A103F", d: "26.07.17" },
     { t: "견적 비교하니 가격 차이가 꽤 있었는데 합리적인 곳으로 안내해주셔서 만족스러웠어요...", n: "아정당_F02C81", d: "26.07.31" },
   ],
+  "청소": [
+    { t: "오늘 입주청소 받았는데 디테일이 엄청나네요! 서랍까지 꺼내서 꼼꼼하게 청소해 주실 줄은 몰랐는데...", n: "고양 김** 님", d: "26.08.06" },
+    { t: "비포&애프터가 확실해서 믿음이 갔고, 주변에도 꼭 추천하고 싶을 정도로 만족스러웠습니다...", n: "화성 유** 님", d: "26.08.02" },
+    { t: "상담부터 청소 마무리까지 정말 친절하고 체계적으로 진행돼서 믿음이 갔어요. 가격 대비 품질도...", n: "성남 송** 님", d: "26.07.29" },
+    { t: "새로 입주하는 집이어서 먼지 분진 많았는데, 사진만 봐도 마음 놓고 들어갈 수 있겠어요...", n: "청주 김** 님", d: "26.07.25" },
+    { t: "처음엔 반신반의했지만 체계적으로 진행돼 믿음이 달라졌고, 숨은 먼지까지 잡아주셔서 만족도가...", n: "부산 김** 님", d: "26.07.21" },
+  ],
+  "부동산": [],
+  "인테리어": [],
 };
 
 const ICONS = [
@@ -1067,6 +1109,16 @@ class Component extends DCLogic {
     };
     this.bnCardRef = (el) => { this.bnCard = el; if (this.bnMobPaint) this.bnMobPaint(true); };
     this.bnMobRef = (el) => { if (el && this.bnMob !== el) { this.bnMob = el; this.armBenefitsMobile(); } };
+    /* React sets muted only as an attribute, so autoplay is blocked — set the
+       property and play when the clip scrolls into view. */
+    this.supportVidRef = (el) => {
+      if (!el || this.supportVid === el) return;
+      this.supportVid = el;
+      el.muted = true; el.defaultMuted = true; el.playsInline = true;
+      const play = () => { const p = el.play(); if (p && p.catch) p.catch(() => {}); };
+      if (!window.IntersectionObserver) { play(); return; }
+      new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) play(); else el.pause(); }), { threshold: 0.25 }).observe(el);
+    };
     this.bandCtaRef = (el) => {
       if (!el || this.bandCta === el) return;
       this.bandCta = el;
@@ -2073,23 +2125,11 @@ class Component extends DCLogic {
 
     const SLIDES = [
       {
-        head: '몰라서 놓치는 혜택<br>최대 <b data-rc-count style="font-weight:800;color:#145CE6;font-variant-numeric:tabular-nums;">152만 원+</b>',
-        dur: 4900,
-        stack: true,
-        phone: '<div style="text-align:center;font-size:clamp(34px,7vw,46px);font-weight:300;letter-spacing:-0.03em;line-height:1;color:rgba(255,255,255,0.92);">20:21</div>',
-        pops: [
-          { t: "인터넷 설치 지원금", v: "52만 원+" },
-          { t: "정수기 설치 지원금", v: "30만 원+" },
-          { t: "휴대폰 지원금", v: "50만 원+" },
-          { t: "카드 캐시백", v: "20만 원+" },
-        ],
-      },
-      {
         head: '지금까지 찾아드린<br>숨은 지원금 <b style="font-weight:800;color:#145CE6;">2,294억 원</b>',
-        dur: 5400,
+        dur: 4200,
         /* 연도 릴: 화면 중앙에서 한 해씩 확대되며 위로 지나간다. */
         phone: '<div data-rc-years style="position:relative;height:100%;min-height:150px;overflow:hidden;">' +
-          '<div data-rc-reel style="position:absolute;left:0;right:0;top:50%;display:flex;flex-direction:column;align-items:center;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1);">' +
+          '<div data-rc-reel style="position:absolute;left:0;right:0;top:50%;display:flex;flex-direction:column;align-items:center;transition:transform 2.2s cubic-bezier(0.32,0,0.28,1);">' +
           ['2021','2022','2023','2024','2025','2026'].map(function (y) {
             return '<div data-rc-year style="height:56px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;letter-spacing:-0.04em;line-height:1;color:#fff;opacity:0.4;transform:scale(0.72);transition:color 0.35s ease,opacity 0.4s cubic-bezier(0.22,1,0.36,1),transform 0.5s cubic-bezier(0.22,1,0.36,1);text-shadow:0 1px 4px rgba(20,60,120,0.1);">' + y + '년</div>';
           }).join("") +
@@ -2102,8 +2142,38 @@ class Component extends DCLogic {
         pops: [{ sum: true }],
       },
       {
+        head: '몰라서 놓치는 혜택<br>최대 <b data-rc-count style="font-weight:800;color:#145CE6;font-variant-numeric:tabular-nums;">152만 원+</b>',
+        dur: 4200,
+        stack: true,
+        phone: '<div style="text-align:center;font-size:clamp(34px,7vw,46px);font-weight:300;letter-spacing:-0.03em;line-height:1;color:rgba(255,255,255,0.92);">20:21</div>',
+        pops: [
+          { t: "인터넷 설치 지원금", v: "52만 원+" },
+          { t: "정수기 설치 지원금", v: "30만 원+" },
+          { t: "휴대폰 지원금", v: "50만 원+" },
+          { t: "카드 캐시백", v: "20만 원+" },
+        ],
+      },
+      {
+        head: '월 평균 상담<br><b data-rc-count data-rc-to="175092" data-rc-suffix="건" style="font-weight:800;color:#145CE6;font-variant-numeric:tabular-nums;">175,092건</b>',
+        dur: 4200,
+        phone: '<div style="display:flex;flex-direction:column;gap:8px;min-height:150px;justify-content:center;">' +
+          '<div style="display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;background:#fff;box-shadow:0 8px 20px -16px rgba(20,60,120,0.45);text-align:left;animation:ajd-rise 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s both;">' +
+            '<span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:10px;background:#ECF2FD;font-size:11px;font-weight:800;color:#145CE6;">인터넷</span>' +
+            '<span style="flex:1 1 auto;min-width:0;"><span style="display:block;font-size:11px;font-weight:500;color:#575E64;">상담 접수 · 방금</span><span style="display:block;margin-top:1px;font-size:13px;font-weight:700;color:#1F2429;">인터넷 · 김** 님</span></span>' +
+          '</div>' +
+          '<div style="display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;background:#fff;box-shadow:0 8px 20px -16px rgba(20,60,120,0.45);text-align:left;animation:ajd-rise 0.6s cubic-bezier(0.22,1,0.36,1) 0.45s both;">' +
+            '<span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:10px;background:#ECF2FD;font-size:11px;font-weight:800;color:#145CE6;">렌탈</span>' +
+            '<span style="flex:1 1 auto;min-width:0;"><span style="display:block;font-size:11px;font-weight:500;color:#575E64;">상담 접수 · 1분 전</span><span style="display:block;margin-top:1px;font-size:13px;font-weight:700;color:#1F2429;">정수기 렌탈 · 이** 님</span></span>' +
+          '</div>' +
+          '<div style="display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;background:#fff;box-shadow:0 8px 20px -16px rgba(20,60,120,0.45);text-align:left;animation:ajd-rise 0.6s cubic-bezier(0.22,1,0.36,1) 0.8s both;">' +
+            '<span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:10px;background:#ECF2FD;font-size:11px;font-weight:800;color:#145CE6;">이사</span>' +
+            '<span style="flex:1 1 auto;min-width:0;"><span style="display:block;font-size:11px;font-weight:500;color:#575E64;">상담 접수 · 2분 전</span><span style="display:block;margin-top:1px;font-size:13px;font-weight:700;color:#1F2429;">이사 · 박** 님</span></span>' +
+          '</div>' +
+          '</div>',
+      },
+      {
         head: '<b style="font-weight:800;color:#145CE6;">365일 24시간</b><br>바로 상담',
-        dur: 5400,
+        dur: 4200,
         /* 채팅 시퀀스: 질문 → 타이핑 점 → 답변. 렌더러가 data-s3-* 후크를 잡는다. */
         phone: '<div style="display:flex;flex-direction:column;gap:9px;min-height:150px;justify-content:center;">' +
           '<div data-s3-ask style="align-self:flex-end;max-width:88%;padding:10px 13px;border-radius:16px 16px 4px 16px;background:#145CE6;font-size:12px;font-weight:600;line-height:1.45;color:#fff;text-align:left;opacity:0;transform:translateY(10px);transition:opacity 0.5s ease,transform 0.6s cubic-bezier(0.22,1,0.36,1);">4인 가족 인터넷이랑 정수기 설치</div>' +
@@ -2115,25 +2185,6 @@ class Component extends DCLogic {
           '<div data-s3-answer style="display:none;align-self:flex-start;max-width:90%;padding:10px 13px;border-radius:16px 16px 16px 4px;background:#fff;font-size:12px;font-weight:600;line-height:1.45;color:#1F2429;text-align:left;opacity:0;transform:translateY(10px);transition:opacity 0.5s ease,transform 0.6s cubic-bezier(0.22,1,0.36,1);">고객님께 딱 맞는 통신사와 정수기를<br>가장 큰 혜택으로 찾았어요</div>' +
           '</div>',
         pops: [{ kind: "상담 접수", t: "예상 혜택", v: "82만 원+" }],
-      },
-      {
-        head: '<b style="font-weight:800;color:#145CE6;">전문상담사 1:1</b><br>맞춤 서비스',
-        dur: 4400,
-        phone: '<div style="display:flex;flex-direction:column;gap:8px;min-height:150px;justify-content:center;">' +
-          '<div style="text-align:center;font-size:12px;font-weight:600;letter-spacing:-0.02em;color:rgba(255,255,255,0.86);">담당 배정 완료</div>' +
-          '<div style="display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:16px;background:#fff;">' +
-            '<span aria-hidden="true" style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:#ECF2FD;"><img src="uploads/wifi.webp" alt="" style="width:20px;height:20px;object-fit:contain;"></span>' +
-            '<span style="flex:1 1 auto;text-align:left;"><span style="display:block;font-size:11px;font-weight:500;color:#575E64;">인터넷 전담</span><span style="display:block;font-size:13px;font-weight:700;letter-spacing:-0.03em;color:#1F2429;">8개 통신사 전상품 담당</span></span>' +
-          '</div>' +
-          '<div style="display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:16px;background:#fff;">' +
-            '<span aria-hidden="true" style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:#ECF2FD;"><img src="uploads/rental.webp" alt="" style="width:20px;height:20px;object-fit:contain;"></span>' +
-            '<span style="flex:1 1 auto;text-align:left;"><span style="display:block;font-size:11px;font-weight:500;color:#575E64;">렌탈 전담</span><span style="display:block;font-size:13px;font-weight:700;letter-spacing:-0.03em;color:#1F2429;">3,000종 렌탈료 담당</span></span>' +
-          '</div>' +
-          '</div>',
-        pops: [
-          { person: true, role: "이사 전담", line: "본사 책임제 100% 적용" },
-          { person: true, role: "인테리어 전담", line: "외주 없는 직영 시공 관리" },
-        ],
       },
     ];
 
@@ -2201,11 +2252,13 @@ class Component extends DCLogic {
       /* The template's hidden state comes back on every re-render, so the
          stage is re-revealed here rather than only in start(). */
       if (this.rcStage) {
+        if (this.rcStage.getAnimations) this.rcStage.getAnimations().forEach((a) => a.cancel());
+        this.rcStage.style.removeProperty("animation");
         this.rcStage.style.opacity = "1";
         this.rcStage.style.transform = "translateY(0)";
       }
       if (this.rcFillFor !== i) { this.rcFillFor = i; this.rcT0 = performance.now(); }
-      const off = Math.min(SLIDES[i].dur - 1, performance.now() - (this.rcT0 || performance.now()));
+      const off = Math.max(0, Math.min(SLIDES[i].dur - 1, performance.now() - (this.rcT0 || performance.now())));
       dotList().forEach((d, n) => {
         d.style.width = n === i ? "84px" : "8px";
         d.style.background = "rgba(31,36,41,0.14)";
@@ -2218,37 +2271,54 @@ class Component extends DCLogic {
           f.style.animation = "ajd-rc-fill " + SLIDES[i].dur + "ms linear " + (-off).toFixed(0) + "ms forwards";
         }
       });
-      clearInterval(this.rcYearTimer);
       const reel = this.rcPhone.querySelector("[data-rc-reel]");
-      if (reel) {
+      if (reel && this.rcReelFor !== i) {
+        this.rcReelFor = i;
+        clearInterval(this.rcYearTimer);
+        clearTimeout(this.rcYearEnd);
         const years = Array.from(reel.querySelectorAll("[data-rc-year]"));
         const H = 56;
         let y = 0;
-        const paintYears = () => {
-          reel.style.transform = "translateY(" + (-y * H - H * 1.5) + "px)";
+        const win = reel.parentElement;
+        const centre = () => {
+          const mid = win.getBoundingClientRect().top + win.offsetHeight / 2;
+          const base = reel.getBoundingClientRect().top;
           years.forEach((el2, n) => {
-            const on = n === y;
-            el2.style.color = "#fff";
-            el2.style.opacity = on ? "1" : "0.4";
-            el2.style.transform = on ? "scale(1.25)" : "scale(0.72)";
+            const c = base + n * H + H / 2;
+            const d = Math.min(1, Math.abs(c - mid) / (H * 1.25));
+            const k = 1 - d;
+            el2.style.transition = "none";
+            el2.style.opacity = (0.3 + 0.7 * k).toFixed(3);
+            el2.style.transform = "scale(" + (0.72 + 0.53 * k).toFixed(3) + ")";
           });
         };
+        const paintYears = () => {
+          reel.style.transform = "translateY(" + (-y * H - H / 2) + "px)";
+        };
         paintYears();
-        /* The reel runs once: at 2026 it stops and hands over to the next
-           slide instead of wrapping back to 2021. */
-        this.rcYearTimer = setInterval(() => {
-          if (y >= years.length - 1) {
-            clearInterval(this.rcYearTimer);
-            clearTimeout(this.rcTail);
-            this.rcTail = setTimeout(() => { if (this.rcGoNext) this.rcGoNext(); }, s2.dur + 1200);
-            return;
-          }
-          y++;
-          paintYears();
-        }, 900);
+        /* setInterval, not rAF: a throttled frame loop (hidden tab, offscreen
+           iframe) would freeze the emphasis mid-glide. */
+        clearInterval(this.rcYearRaf);
+        this.rcYearRaf = setInterval(centre, 40);
+        centre();
+        /* One continuous glide 2021 → 2026 (3.6s), then hand over. */
+        setTimeout(() => { y = years.length - 1; paintYears(); }, 60);
+        this.rcYearEnd = setTimeout(() => {
+          clearInterval(this.rcYearRaf);
+          this.rcYearRaf = 0;
+          centre();
+                  }, 2300);
+      } else if (!reel) {
+        clearInterval(this.rcYearRaf);
+        clearTimeout(this.rcYearEnd);
+        this.rcReelFor = -1;
       }
       const cnt = this.rcHead.querySelector("[data-rc-count]");
-      if (cnt && !reduce && !this.rcCounted) { this.rcCounted = true; this.countUp(cnt, 152, "만 원"); }
+      this.rcCountedSet = this.rcCountedSet || {};
+      if (cnt && !reduce && !this.rcCountedSet[i]) {
+        this.rcCountedSet[i] = true;
+        this.countUp(cnt, parseInt(cnt.getAttribute("data-rc-to") || "152", 10), cnt.getAttribute("data-rc-suffix") || "만 원");
+      }
 
       /* Pop-outs arrive one by one, then the set holds so it can be read. */
       clearTimeout(this.rcSeqA); clearTimeout(this.rcSeqB);
@@ -2309,8 +2379,7 @@ class Component extends DCLogic {
           const id = setTimeout(() => settle(n), n * span);
           this.rcStackTimers.push(id);
         });
-        this.rcTail = setTimeout(() => { if (this.rcGoNext) this.rcGoNext(); }, s2.dur + 1200);
-        t0 = performance.now();
+                t0 = performance.now();
         return;
       }
 
@@ -2319,9 +2388,7 @@ class Component extends DCLogic {
           clearInterval(popTimer);
           /* Last card is up — move on after a short read beat rather than
              idling until the slide timer expires. */
-          clearTimeout(this.rcTail);
-          this.rcTail = setTimeout(() => { if (this.rcGoNext) this.rcGoNext(); }, s2.dur + 1200);
-          return;
+                    return;
         }
         const wrap = document.createElement("div");
         wrap.innerHTML = popCard(s2.pops[k]);
@@ -2396,6 +2463,16 @@ class Component extends DCLogic {
 
     this.rcRender = render;
     this.rcGoNext = () => { if (!this.rcSwapping) go(1); };
+    /* Wall-clock safety net: the gauge's animationend is the primary cue, but
+       a slide must never be able to stall on it. */
+    clearInterval(this.rcTickRaf);
+    const tick = () => {
+      if (!this.rcDots || !this.rcDots.isConnected) return;
+      if (this.rcSwapping || this.rcStarted !== true) return;
+      const dur = SLIDES[i] ? SLIDES[i].dur : 4200;
+      if (performance.now() - (this.rcT0 || performance.now()) >= dur + 260) go(1);
+    };
+    this.rcTickRaf = setInterval(tick, 120);
     this.rcDots.addEventListener("animationend", (ev) => {
       if (ev.animationName === "ajd-rc-fill" && !this.rcSwapping) go(1);
     });
@@ -2420,20 +2497,35 @@ class Component extends DCLogic {
         i = next;
         if (this.rcClock) this.rcClock();
         panes.forEach((p) => { p.style.transition = "none"; p.style.opacity = "0"; p.style.transform = "translateX(" + (d * IN) + "%)"; });
+        /* Gauge starts when the incoming mockup LANDS (0.7s after repaint), not at
+         repaint — otherwise the bar ran ahead of the slide it belongs to. The
+         negative offset becomes a positive animation-delay in render(). */
+        this.rcFillFor = i;
+        this.rcT0 = performance.now() + 700;
         render();
-        requestAnimationFrame(() => requestAnimationFrame(() => {
+        /* Timers, not rAF: a throttled frame loop used to latch rcSwapping
+           true and strand the incoming mockup at opacity 0 forever. */
+        setTimeout(() => {
           panes.forEach((p, n) => {
             const dl = (n * 0.05).toFixed(2);
             p.style.transition = "opacity 0.4s ease " + dl + "s, transform 0.62s cubic-bezier(0.16,1,0.3,1) " + dl + "s";
             p.style.opacity = "1";
             p.style.transform = "translateX(0)";
           });
-          setTimeout(() => {
-            this.rcSwapping = false;
-            panes.forEach((p) => { p.style.willChange = "auto"; });
-          }, 660);
-        }));
+        }, 50);
+        setTimeout(() => {
+          this.rcSwapping = false;
+          panes.forEach((p) => { p.style.willChange = "auto"; });
+        }, 700);
       }, 360);
+      /* Unconditional release: the carousel must never be able to lock. */
+      clearTimeout(this.rcUnlock);
+      this.rcUnlock = setTimeout(() => {
+        this.rcSwapping = false;
+        panes.forEach((p) => {
+          if (p.style.opacity !== "1") { p.style.transition = "none"; p.style.opacity = "1"; p.style.transform = "translateX(0)"; }
+        });
+      }, 1500);
     };
 
     const go = (d) => swap((i + d + SLIDES.length) % SLIDES.length, d);
@@ -2462,8 +2554,10 @@ class Component extends DCLogic {
     }
 
     const start = () => {
+      if (this.rcStage.getAnimations) this.rcStage.getAnimations().forEach((a) => a.cancel());
       this.rcStage.style.opacity = "1";
       this.rcStage.style.transform = "translateY(0)";
+      this.rcStarted = true;
       render();
       if (reduce) return;
       /* Elapsed time lives in a variable and the bar is written only when its
@@ -2518,12 +2612,22 @@ class Component extends DCLogic {
        the hero should show the headline only, and the reel starts as the mockup
        comes into view. */
     const kick = () => {
+      if (this.rcStarted) return true;
       const r = this.rcStage.getBoundingClientRect();
       const vh = window.innerHeight || 800;
-      if (r.top < vh * 0.72 && r.bottom > 0) { window.removeEventListener("scroll", kick); start(); return true; }
+      if (r.top < vh * 0.92 && r.bottom > vh * 0.04) {
+        window.removeEventListener("scroll", kick);
+        clearInterval(this.rcKickRaf);
+        start();
+        return true;
+      }
       return false;
     };
-    if (!kick()) window.addEventListener("scroll", kick, { passive: true });
+    if (!kick()) {
+      window.addEventListener("scroll", kick, { passive: true });
+      clearInterval(this.rcKickRaf);
+      this.rcKickRaf = setInterval(() => { if (kick()) clearInterval(this.rcKickRaf); }, 120);
+    }
   }
 
   countUp(el, target, suffix) {
@@ -2575,6 +2679,20 @@ class Component extends DCLogic {
     this.paintReviews();
   }
 
+  /* Paint every tab once, recording the tallest heading/rail, then restore. */
+  warmReviews() {
+    this.rvWarming = true;
+    const cat0 = this.reviewCat, prop0 = this.propCat;
+    Object.keys(REVIEWS).forEach((c) => {
+      this.reviewCat = c;
+      if (c === "부동산") Object.keys(PROPERTY).forEach((p) => { this.propCat = p; this.paintReviews(); });
+      else this.paintReviews();
+    });
+    this.reviewCat = cat0; this.propCat = prop0;
+    this.rvWarming = false;
+    this.paintReviews();
+  }
+
   paintReviews() {
     Array.from(this.reviewTabs.children).forEach((btn) => {
       const active = btn.getAttribute("data-cat") === this.reviewCat;
@@ -2584,12 +2702,23 @@ class Component extends DCLogic {
       btn.style.color = active ? "#145CE6" : "#1F2429";
       btn.style.fontWeight = active ? "700" : "500";
     });
-    const all = REVIEWS[this.reviewCat] || [];
-    const items = this.isMobile ? all.slice(0, 3) : all;
     const cat = this.reviewCat;
+    const isProp = cat === "부동산";
+    const isInt = cat === "인테리어";
+    if (!this.propCat) this.propCat = Object.keys(PROPERTY)[0];
+    const head = this.reviewGrid.closest("section") && this.reviewGrid.closest("section").querySelector("[data-rv-head]");
+    if (head) head.innerHTML = isInt
+      ? '아정당 <span style="color: rgb(20, 92, 230);">인테리어 포트폴리오</span>' +
+        '<span style="display: block; margin-top: 8px; font-size: clamp(14px, 1.2vw, 16px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.55; color: #575E64;">직접 시공한 현장을 있는 그대로 공개합니다</span>'
+      : isProp
+      ? '아정당 <span style="color: rgb(20, 92, 230);">부동산 포트폴리오</span>' +
+        '<span style="display: block; margin-top: 8px; font-size: clamp(14px, 1.2vw, 16px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.55; color: #575E64;">실제 고객님의 매물만 100% 거짓 없이 투명하게 공개합니다</span>'
+      : '아정당을 직접 경험한<br><span style="color: rgb(20, 92, 230);">실제 고객님의 후기</span>예요';
+    const all = isProp ? (PROPERTY[this.propCat] || []) : isInt ? INTERIOR : (REVIEWS[cat] || []);
+    const items = this.isMobile ? all.slice(0, 3) : all;
     /* Horizontal rail: one card per view on mobile, ~2.4 on desktop, with
        arrow buttons that page the scroll container. */
-    const card = (r, i) => (
+    const textCard = (r, i) => (
       '<article style="flex: 0 0 auto; width: min(86vw, 360px); scroll-snap-align: center; display: flex; flex-direction: column; border: 1px solid #DEE2E6; border-radius: 16px; background: #fff; overflow: hidden; text-align: left;">' +
         '<div style="position: relative; aspect-ratio: 16 / 10; background: #F4F6FA; border-bottom: 1px solid #ECF0F4; overflow: hidden;">' +
           (RV_PHOTOS[cat] && RV_PHOTOS[cat][i % RV_PHOTOS[cat].length]
@@ -2607,7 +2736,57 @@ class Component extends DCLogic {
         '</div>' +
       '</article>'
     );
-    this.reviewGrid.innerHTML =
+    /* Portfolio card: empty 3:2 photo slot, name, 동, area. */
+    const propCard = (r, i) => (
+      '<article style="flex: 0 0 auto; width: min(86vw, 360px); scroll-snap-align: center; display: flex; flex-direction: column; gap: 12px; text-align: left;">' +
+        '<div style="position: relative; aspect-ratio: 16 / 10; border-radius: 16px; background: #EEF1F5; overflow: hidden;">' +
+          '<image-slot id="pf-' + this.propCat + '-' + i + '" shape="rect" placeholder="매물 사진" style="position: absolute; inset: 0;"></image-slot>' +
+        '</div>' +
+        '<div>' +
+          '<p style="margin: 0; font-size: 15px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.4; color: #1F2429;">' + r.n + '</p>' +
+          '<p style="margin: 2px 0 0; font-size: 14px; font-weight: 500; color: #575E64;">' + r.d + '</p>' +
+          '<p style="margin: 2px 0 0; font-size: 13px; font-weight: 400; color: #8A94A0;">' + r.a + '</p>' +
+        '</div>' +
+      '</article>'
+    );
+    /* Interior card: full-bleed site photo, tags on top, quote + site on a
+       dark fade — same 360px footprint as the other tabs. */
+    /* Interior card: site photo + a spec table, mirroring the 부동산 layout. */
+    const intCard = (r, i) => (
+      '<article style="flex: 0 0 auto; width: min(86vw, 360px); scroll-snap-align: center; display: flex; flex-direction: column; gap: 10px; text-align: left;">' +
+        '<div style="position: relative; aspect-ratio: 16 / 10; border-radius: 16px; background: #EEF1F5; overflow: hidden;">' +
+          '<image-slot id="int-' + i + '" shape="rect" placeholder="시공 사진" style="position: absolute; inset: 0;"></image-slot>' +
+        '</div>' +
+        '<div>' +
+          (r.site && r.site !== "-" ? '<div style="display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid #ECF0F4;">' +
+            '<span style="font-size: 13px; font-weight: 500; color: #8A94A0;">현장명</span>' +
+            '<span style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #1F2429;">' + r.site + '</span>' +
+          '</div>' : '') +
+          (r.size && r.size !== "-" ? '<div style="display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid #ECF0F4;">' +
+            '<span style="font-size: 13px; font-weight: 500; color: #8A94A0;">평형</span>' +
+            '<span style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #1F2429;">' + r.size + '</span>' +
+          '</div>' : '') +
+          (r.term && r.term !== "-" ? '<div style="display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid #ECF0F4;">' +
+            '<span style="font-size: 13px; font-weight: 500; color: #8A94A0;">공사기간</span>' +
+            '<span style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #1F2429;">' + r.term + '</span>' +
+          '</div>' : '') +
+          (r.price && r.price !== "-" ? '<div style="display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid #ECF0F4;">' +
+            '<span style="font-size: 13px; font-weight: 500; color: #8A94A0;">평당 견적</span>' +
+            '<span style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #1F2429;">' + r.price + '</span>' +
+          '</div>' : '') +
+        '</div>' +
+      '</article>'
+    );
+    const card = isProp ? propCard : isInt ? intCard : textCard;
+    const chips = isProp
+      ? '<div data-pf-chips style="width: 100%; max-width: 1000px; margin: 0 auto 18px; display: flex; flex-wrap: wrap; gap: 8px;">' +
+          Object.keys(PROPERTY).map((k) => {
+            const on = k === this.propCat;
+            return '<button data-pf="' + k + '" type="button" style="all: unset; cursor: pointer; padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 14px; font-weight: ' + (on ? 700 : 500) + '; background: ' + (on ? "#1F2429" : "#F4F6FA") + '; color: ' + (on ? "#fff" : "#575E64") + ';">' + k + '</button>';
+          }).join("") +
+        '</div>'
+      : '';
+    this.reviewGrid.innerHTML = chips +
       '<div style="position: relative; width: 100%;">' +
         '<div data-rv-rail style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 2px 4px 6px;">' +
           items.map(card).join("") +
@@ -2618,10 +2797,28 @@ class Component extends DCLogic {
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;"><path d="M9 6l6 6-6 6"/></svg></button>' +
       '</div>';
     this.reviewGrid.style.display = "block";
+    /* Every tab occupies the same box: the tallest heading and rail seen at
+       this breakpoint become the floor, so switching tabs never shifts the page. */
+    const bp = this.isMobile ? "m" : "d";
+    if (this.rvBp !== bp) {
+      this.rvBp = bp; this.rvMaxH = 0; this.rvHeadH = 0;
+      this.reviewGrid.style.minHeight = ""; if (head) head.style.minHeight = "";
+      if (!this.rvWarming) { this.warmReviews(); return; }
+    }
+    this.rvMaxH = Math.max(this.rvMaxH || 0, this.reviewGrid.offsetHeight);
+    this.reviewGrid.style.minHeight = this.rvMaxH + "px";
+    if (head) {
+      this.rvHeadH = Math.max(this.rvHeadH || 0, head.offsetHeight);
+      head.style.minHeight = this.rvHeadH + "px";
+    }
     const rail = this.reviewGrid.querySelector("[data-rv-rail]");
     const page = (d) => rail.scrollBy({ left: d * (rail.firstElementChild ? rail.firstElementChild.offsetWidth + 16 : 320), behavior: "smooth" });
     this.reviewGrid.querySelector("[data-rv-prev]").addEventListener("click", () => page(-1));
     this.reviewGrid.querySelector("[data-rv-next]").addEventListener("click", () => page(1));
+    this.reviewGrid.querySelectorAll("[data-pf]").forEach((b) => b.addEventListener("click", () => {
+      this.propCat = b.getAttribute("data-pf");
+      this.paintReviews();
+    }));
   }
 
 
@@ -2883,7 +3080,7 @@ class Component extends DCLogic {
         if (!this.vAutoScrolled && window.scrollY < 40) {
           this.vAutoScrolled = true;
           const target = document.getElementById("services");
-          if (target) setTimeout(() => window.scrollTo({ top: target.offsetTop - 152, behavior: "smooth" }), 700);
+          if (target) setTimeout(() => window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 152, behavior: "smooth" }), 700);
         }
         return;
       }
@@ -3253,7 +3450,7 @@ class Component extends DCLogic {
        run token retires the previous loop. */
     if (typeof this.lbIndex !== "number") this.lbIndex = 0;
     if (this.lbIndex >= SLIDES.length) this.lbIndex = 0;
-    const DUR = 4000;
+    const DUR = 3000;
     const run = (this.lbRun = (this.lbRun || 0) + 1);
     let t0 = performance.now(), visible = true;
     const paint = () => {
@@ -3580,7 +3777,7 @@ class Component extends DCLogic {
        this one — a click carries the reader down to it. */
     if (!noScroll) {
       const sec = document.getElementById("benefits");
-      if (sec) window.scrollTo({ top: sec.offsetTop - 152, behavior: "smooth" });
+      if (sec) window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 152, behavior: "smooth" });
     }
 
     const submit = this.panel.querySelector("[data-lead-submit]");
@@ -3788,6 +3985,7 @@ class Component extends DCLogic {
       plusRef: this.plusRef,
       floatCtaRef: this.floatCtaRef,
       bandCtaRef: this.bandCtaRef,
+      supportVidRef: this.supportVidRef,
       bnStageRef: this.bnStageRef,
       bnMobRef: this.bnMobRef,
       bnCardRef: this.bnCardRef,
