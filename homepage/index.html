@@ -1114,8 +1114,9 @@ class Component extends DCLogic {
     this.supportVidRef = (el) => {
       if (!el || this.supportVid === el) return;
       this.supportVid = el;
-      el.muted = true; el.defaultMuted = true; el.playsInline = true;
+      el.muted = true; el.defaultMuted = true; el.playsInline = true; el.loop = true;
       const play = () => { const p = el.play(); if (p && p.catch) p.catch(() => {}); };
+      el.addEventListener("ended", () => { el.currentTime = 0; play(); });
       if (!window.IntersectionObserver) { play(); return; }
       new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) play(); else el.pause(); }), { threshold: 0.25 }).observe(el);
     };
