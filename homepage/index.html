@@ -486,11 +486,11 @@
 
   <section id="craft2" data-screen-label="Craft2" style="position: relative; width: 100%; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3vh, 40px); padding: clamp(22px, 3.4vh, 40px) 20px clamp(44px, 7vh, 80px); overflow: hidden; padding-top: clamp(56px, 8vh, 96px); padding-bottom: clamp(48px, 7vh, 80px)">
     <div ref="{{ cr2CopyRef }}" style="flex: 0 0 auto; text-align: center; opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.16,1,0.3,1);">
-      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; text-wrap: pretty;">아정당은 생활 전반을<br>여러분과 함께하고 있습니다</h2>
+      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; text-wrap: pretty;"><span data-wch="" style="display: inline-block; opacity: 1; transform: translateY(0px); transition: opacity 0.42s, transform 0.55s cubic-bezier(0.22, 1.1, 0.36, 1);">아정당은</span> <span data-wch="" style="display: inline-block; opacity: 1; transform: translateY(0px); transition: opacity 0.42s 0.055s, transform 0.55s cubic-bezier(0.22, 1.1, 0.36, 1) 0.055s;">생활</span> <span data-wch="" style="display: inline-block; opacity: 1; transform: translateY(0px); transition: opacity 0.42s 0.11s, transform 0.55s cubic-bezier(0.22, 1.1, 0.36, 1) 0.11s;">전반을</span><br><span data-wch="" style="display: inline-block; opacity: 1; transform: translateY(0px); transition: opacity 0.42s 0.22s, transform 0.55s cubic-bezier(0.22, 1.1, 0.36, 1) 0.22s;">함께하고</span> <span data-wch="" style="display: inline-block; opacity: 1; transform: translateY(0px); transition: opacity 0.42s 0.275s, transform 0.55s cubic-bezier(0.22, 1.1, 0.36, 1) 0.275s;">있습니다</span></h2>
     </div>
 
-      <img src="assets/service-web2.png" alt="아정당 생활서비스 전반" style="width: min(82vw, 720px); max-height: 48vh; margin: 0 auto; object-fit: contain; display: block;">
-      <p style="margin: 0; max-width: 760px; text-align: center; font-size: clamp(16px, 1.5vw, 21px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #575E64; text-wrap: pretty;">한 번의 실망으로 브랜드&nbsp;<span style="letter-spacing: -0.42px;">전체</span>&nbsp;신뢰가 무너지기에<br>절대 어떤 서비스라도 대충 하지 않습니다</p>
+      <p style="margin: 0; max-width: 760px; text-align: center; font-size: clamp(16px, 1.5vw, 21px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #575E64; text-wrap: pretty;">한 번의 실망으로 브랜드&nbsp;<span style="letter-spacing: -0.42px;">전체</span>&nbsp;신뢰가 무너지기에<br>절대 어떤 서비스라도 대충 하지 않습니다</p><img src="assets/service-web2.png" alt="아정당 생활서비스 전반" style="width: min(82vw, 720px); max-height: 48vh; margin: 0 auto; object-fit: contain; display: block;">
+      
 
   </section><section id="liability" data-screen-label="Liability" style="position: relative; width: 100%; background: transparent; padding: clamp(56px, 8vh, 96px) 20px clamp(48px, 7vh, 80px); display: flex; flex-direction: column; align-items: center;">
     <h2 style="margin: 0 0 clamp(16px, 2.6vh, 30px); max-width: 900px; text-align: center; font-size: clamp(26px, 2.8vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.38; color: #1F2429; text-wrap: pretty;">문제가 발생하면<br><span style="color: rgb(20, 92, 230);">본사가 직접 책임</span>지겠습니다</h2>
@@ -2127,7 +2127,7 @@ class Component extends DCLogic {
     const SLIDES = [
       {
         head: '지금까지 찾아드린<br>숨은 지원금 <b style="font-weight:800;color:#145CE6;">2,294억 원</b>',
-        dur: 4200,
+        dur: 3300, anim: 4200,
         /* 연도 릴: 화면 중앙에서 한 해씩 확대되며 위로 지나간다. */
         phone: '<div data-rc-years style="position:relative;height:100%;min-height:150px;overflow:hidden;">' +
           '<div data-rc-reel style="position:absolute;left:0;right:0;top:50%;display:flex;flex-direction:column;align-items:center;transition:transform 2.2s cubic-bezier(0.32,0,0.28,1);">' +
@@ -2144,7 +2144,7 @@ class Component extends DCLogic {
       },
       {
         head: '몰라서 놓치는 혜택<br>최대 <b data-rc-count style="font-weight:800;color:#145CE6;font-variant-numeric:tabular-nums;">152만 원+</b>',
-        dur: 4200,
+        dur: 3300, anim: 4200,
         stack: true,
         phone: '<div style="text-align:center;font-size:clamp(34px,7vw,46px);font-weight:300;letter-spacing:-0.03em;line-height:1;color:rgba(255,255,255,0.92);">20:21</div>',
         pops: [
@@ -2156,14 +2156,14 @@ class Component extends DCLogic {
       },
       {
         head: '월 평균 상담<br><b data-rc-count data-rc-to="175092" data-rc-suffix="건" style="font-weight:800;color:#145CE6;font-variant-numeric:tabular-nums;">175,092건</b>',
-        dur: 4200,
+        dur: 3300, anim: 4200,
         feed: true,
         phone: '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;padding:0 2px;font-size:11px;font-weight:600;color:#575E64;"><span>상담 접수</span></div>' +
           '<div data-rc-feed style="position:relative;height:168px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 42%);mask-image:linear-gradient(to bottom,transparent 0%,#000 42%);"></div>',
       },
       {
         head: '<b style="font-weight:800;color:#145CE6;">365일 24시간</b><br>바로 상담',
-        dur: 4200,
+        dur: 3300, anim: 4200,
         /* 채팅 시퀀스: 질문 → 타이핑 점 → 답변. 렌더러가 data-s3-* 후크를 잡는다. */
         phone: '<div style="display:flex;flex-direction:column;gap:9px;min-height:150px;justify-content:center;">' +
           '<div data-s3-ask style="align-self:flex-end;max-width:88%;padding:10px 13px;border-radius:16px 16px 4px 16px;background:#145CE6;font-size:12px;font-weight:600;line-height:1.45;color:#fff;text-align:left;opacity:0;transform:translateY(10px);transition:opacity 0.5s ease,transform 0.6s cubic-bezier(0.22,1,0.36,1);">4인 가족 인터넷이랑 정수기 설치</div>' +
@@ -2385,7 +2385,7 @@ class Component extends DCLogic {
             c.style.transform = "translateY(" + (-depth * (STEP + gap)) + "px) scale(" + Math.max(0.9, 1 - depth * 0.04).toFixed(3) + ")";
           });
         };
-        const span = Math.max(600, (s2.dur - 1300) / s2.pops.length);
+        const span = Math.max(600, ((s2.anim || s2.dur) - 1300) / s2.pops.length);
         cards.forEach((c, n) => {
           const id = setTimeout(() => settle(n), n * span);
           this.rcStackTimers.push(id);
@@ -2431,7 +2431,7 @@ class Component extends DCLogic {
       const begin = () => {
         push();
         if (s2.pops.length > 1) {
-          const span = Math.max(s2.stack ? 620 : 520, (s2.dur - (s2.popDelay || 0) - 900) / s2.pops.length);
+          const span = Math.max(s2.stack ? 620 : 520, ((s2.anim || s2.dur) - (s2.popDelay || 0) - 900) / s2.pops.length);
           popTimer = setInterval(push, span);
         }
       };
@@ -2480,7 +2480,7 @@ class Component extends DCLogic {
     const tick = () => {
       if (!this.rcDots || !this.rcDots.isConnected) return;
       if (this.rcSwapping || this.rcStarted !== true) return;
-      const dur = SLIDES[i] ? SLIDES[i].dur : 4200;
+      const dur = SLIDES[i] ? SLIDES[i].dur : 3300;
       if (performance.now() - (this.rcT0 || performance.now()) >= dur + 260) go(1);
     };
     this.rcTickRaf = setInterval(tick, 120);
@@ -3398,14 +3398,14 @@ class Component extends DCLogic {
 
     const play = () => {
       scenery.forEach((im, n) => {
-        im.style.transition = "opacity 0.7s ease " + (n * 0.1).toFixed(2) + "s, transform 0.9s cubic-bezier(0.22,1,0.36,1) " + (n * 0.1).toFixed(2) + "s";
+        im.style.transition = "opacity 0.6s ease " + (n * 0.06).toFixed(2) + "s, transform 0.75s cubic-bezier(0.22,1,0.36,1) " + (n * 0.06).toFixed(2) + "s";
         im.style.opacity = im.dataset.op || "1";
         im.style.transform = im.dataset.baseTf;
       });
-      /* 0.55s apart so each 사업군 reads as its own life stage. */
-      const lead = 0.5 + scenery.length * 0.1;
+      /* 0.32s apart — still sequential, but the whole life cycle lands in ~3s. */
+      const lead = 0.3 + scenery.length * 0.06;
       ranked.forEach((el, n) => {
-        const d = (lead + n * 0.55).toFixed(2);
+        const d = (lead + n * 0.32).toFixed(2);
         el.style.transition = "opacity 0.65s ease " + d + "s, transform 0.85s cubic-bezier(0.22,1.08,0.36,1) " + d + "s";
         el.style.opacity = "1";
         el.style.transform = el.dataset.baseTf;
